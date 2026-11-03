@@ -191,6 +191,25 @@
     .info{grid-template-columns:1fr}
   }
 
+
+  /* PRONÓSTICO */
+  .wx{background:linear-gradient(180deg,#EEF4F6,#F9FBFB);border:1px solid #D6E3E6;border-radius:var(--radius);padding:16px 16px 12px;margin-bottom:16px}
+  .wx-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+  .wx-head b{font-size:.95rem;color:var(--navy)}
+  .wx-head small{font-size:.75rem;color:var(--muted)}
+  .wx-row{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid #DCE6E8}
+  .wx-row:first-of-type{border-top:0}
+  .wx-ico{font-size:1.8rem;line-height:1;text-align:center}
+  .wx-place{font-weight:700;font-size:.95rem}
+  .wx-desc{font-size:.85rem;color:var(--muted);line-height:1.35}
+  .wx-temp{text-align:right;white-space:nowrap}
+  .wx-temp b{font-size:1.15rem;color:var(--red)}
+  .wx-temp span{color:var(--muted);font-size:.9rem}
+  .wx-temp small{display:block;font-size:.75rem;color:var(--navy);font-weight:600}
+  .wx-note{font-size:.78rem;color:var(--muted);margin:8px 0 10px;line-height:1.4}
+  .wx-links{display:flex;flex-wrap:wrap;gap:6px}
+  .wx-links a{font-size:.8rem;font-weight:600;text-decoration:none;color:#fff;background:var(--lake);padding:6px 12px;border-radius:999px}
+
   /* IMPRESIÓN */
   @media print{
     @page{margin:14mm}
@@ -209,6 +228,8 @@
     h2,h3{break-after:avoid}
     a{color:inherit;text-decoration:none}
     .printlinks{display:block!important}
+    .wx{break-inside:avoid;background:#fff}
+    .wx-links{display:none}
     *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   }
   .printlinks{display:none;font-size:.85rem}
@@ -312,6 +333,14 @@
     <div class="dayhead" id="sab"><span class="d"><small>Sáb</small><b>7</b></span>
       <div><h3>Sion y el valle del Valais</h3><p>Elegimos una opción según el tiempo</p></div></div>
 
+    <div class="wx">
+      <div class="wx-head"><b>🌦️ Pronóstico para el sábado 7</b><small>meteoblue · consultado el 3/11/2026</small></div>
+      <div class="wx-row"><span class="wx-ico">⛅</span><div><div class="wx-place">Sion</div><div class="wx-desc">Parcialmente nublado</div></div><div class="wx-temp"><b>10°</b> <span>/ 3°</span><small>💧 30 %</small></div></div>
+      <div class="wx-row"><span class="wx-ico">🌨️</span><div><div class="wx-place">Zermatt</div><div class="wx-desc">Variable con nieve</div></div><div class="wx-temp"><b>5°</b> <span>/ -2°</span><small>💧 40 %</small></div></div>
+      <p class="wx-note">⚠️ <strong>El pronóstico puede cambiar.</strong> Fiabilidad según meteoblue: 45 %. Máx. / mín. en °C y probabilidad de precipitación. Consultad la actualización antes de decidir.</p>
+      <div class="wx-links"><a href="https://www.meteoblue.com/es/tiempo/14-dias/sion_suiza_2658576">Sion ↗</a><a href="https://www.meteoblue.com/es/tiempo/14-dias/zermatt_suiza_11862393">Zermatt ↗</a></div>
+    </div>
+
     <div class="card opt">
       <span class="tag">Opción A · si está despejado</span>
       <h4>🏔️ Zermatt y el Matterhorn</h4>
@@ -335,6 +364,14 @@
     <div class="dayhead" id="dom"><span class="d"><small>Dom</small><b>8</b></span>
       <div><h3>Lago Lemán y Lausana</h3><p>Elegimos una opción</p></div></div>
 
+    <div class="wx">
+      <div class="wx-head"><b>🌦️ Pronóstico para el domingo 8</b><small>meteoblue · consultado el 3/11/2026</small></div>
+      <div class="wx-row"><span class="wx-ico">⛅</span><div><div class="wx-place">Montreux</div><div class="wx-desc">Parcialmente nublado</div></div><div class="wx-temp"><b>10°</b> <span>/ 6°</span><small>💧 40 %</small></div></div>
+      <div class="wx-row"><span class="wx-ico">⛅</span><div><div class="wx-place">Lausana</div><div class="wx-desc">Parcialmente nublado</div></div><div class="wx-temp"><b>9°</b> <span>/ 5°</span><small>💧 45 %</small></div></div>
+      <p class="wx-note">⚠️ <strong>El pronóstico puede cambiar.</strong> Fiabilidad según meteoblue: 50 %. Máx. / mín. en °C y probabilidad de precipitación. Consultad la actualización antes de decidir.</p>
+      <div class="wx-links"><a href="https://www.meteoblue.com/es/tiempo/14-dias/montreux_suiza_2659601">Montreux ↗</a><a href="https://www.meteoblue.com/es/tiempo/14-dias/lausana_suiza_2659994">Lausana ↗</a></div>
+    </div>
+
     <div class="card opt recommended">
       <span class="tag rec">Recomendada · Riviera</span>
       <h4>🏰 Chillon, Montreux y Vevey</h4>
@@ -356,6 +393,13 @@
     <!-- LUNES -->
     <div class="dayhead" id="lun"><span class="d"><small>Lun</small><b>9</b></span>
       <div><h3>De Sion a Ginebra</h3><p>Tarde libre en la ciudad</p></div></div>
+    <div class="wx">
+      <div class="wx-head"><b>🌦️ Pronóstico para el lunes 9</b><small>meteoblue · consultado el 3/11/2026</small></div>
+      <div class="wx-row"><span class="wx-ico">🌧️</span><div><div class="wx-place">Ginebra</div><div class="wx-desc">Mayormente nublado con lluvia</div></div><div class="wx-temp"><b>13°</b> <span>/ 8°</span><small>💧 70 %</small></div></div>
+      <p class="wx-note">⚠️ <strong>El pronóstico puede cambiar.</strong> Fiabilidad según meteoblue: 25 % (baja: aún queda lejos). Máx. / mín. en °C y probabilidad de precipitación. Consultad la actualización antes de decidir.</p>
+      <div class="wx-links"><a href="https://www.meteoblue.com/es/tiempo/14-dias/ginebra_suiza_2660646">Ginebra ↗</a></div>
+    </div>
+
     <ul class="timeline">
       <li class="hl"><span class="when">10:00</span><span class="what">Salida del apartamento de Sion</span><span class="det">Unas 2 h por carretera hasta el aeropuerto de Ginebra.</span></li>
       <li class="hl"><span class="when">13:00</span><span class="what">Devolución del coche de alquiler en el aeropuerto</span></li>
@@ -582,7 +626,7 @@
     <a class="btn alt" href="https://www.google.com/maps/d/viewer?mid=1ZvzAKlxTL63dpxliiMy9uTAHfTKCdZ0">🗺️ Abrir mapa 2</a>
 
     <p class="printlinks">Mapa 1: google.com/maps/d/viewer?mid=14g5kBWRD0XFxG3RwPCuVuDS6pCxou3o<br>Mapa 2: google.com/maps/d/viewer?mid=1ZvzAKlxTL63dpxliiMy9uTAHfTKCdZ0</p>
-    <p class="small">🌦️ Previsión del tiempo: <a href="https://www.meteoblue.com">meteoblue.com</a></p>
+    <p class="small">🌦️ Previsión del tiempo: <a href="https://www.meteoblue.com/es/tiempo/14-dias/sion_suiza_2658576">meteoblue · Sion</a> · <a href="https://www.meteoblue.com/es/tiempo/14-dias/ginebra_suiza_2660646">Ginebra</a></p>
   </section>
 
   <!-- ============ VUELTA ============ -->

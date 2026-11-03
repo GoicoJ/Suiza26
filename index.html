@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suiza 2026 · Guía del viaje</title>
+<meta name="description" content="Guía del viaje a Suiza del 6 al 10 de noviembre de 2026: itinerario, reservas, mapas y checklist.">
+<meta name="theme-color" content="#2C4356">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1F2A33;
+    --navy:#2C4356;      /* azul pizarra alpino */
+    --lake:#5B8A86;      /* verde lago */
+    --lake-soft:#E6EFEC;
+    --red:#B4533E;       /* rojo suizo apagado */
+    --red-soft:#F7E9E4;
+    --sand:#F7F4EE;      /* fondo crema */
+    --card:#FFFFFF;
+    --muted:#5F6B74;
+    --line:#E3DED5;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--sand);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:740px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+  h2{font-size:1.85rem;color:var(--navy)}
+  h3{font-size:1.3rem;color:var(--navy);margin:28px 0 10px}
+  p{margin:0 0 10px}
+  a{color:var(--navy);text-underline-offset:3px}
+  strong{font-weight:600}
+
+  /* HERO */
+  .hero{
+    background:
+      linear-gradient(180deg,rgba(44,67,86,.0) 55%,rgba(44,67,86,.25)),
+      linear-gradient(160deg,#2C4356 0%,#3D5A6E 55%,#5B8A86 100%);
+    color:#fff;position:relative;overflow:hidden;padding:44px 0 92px;
+  }
+  .hero::after{ /* montañas en CSS */
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;
+    background:var(--sand);
+    clip-path:polygon(0 100%,0 62%,9% 40%,17% 58%,28% 18%,38% 52%,46% 36%,57% 70%,66% 28%,74% 46%,83% 10%,92% 44%,100% 30%,100% 100%);
+  }
+  .hero::before{ /* nieve */
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;
+    background:rgba(255,255,255,.22);
+    clip-path:polygon(0 100%,0 52%,9% 30%,17% 48%,28% 8%,38% 42%,46% 26%,57% 60%,66% 18%,74% 36%,83% 0,92% 34%,100% 20%,100% 100%);
+  }
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+  .cross{display:inline-grid;place-items:center;width:22px;height:22px;background:var(--red);border-radius:4px;position:relative}
+  .cross::before,.cross::after{content:"";position:absolute;background:#fff}
+  .cross::before{width:12px;height:4px}.cross::after{width:4px;height:12px}
+  .hero h1{font-size:2.9rem;margin:14px 0 8px}
+  .hero .date{font-size:1.15rem;font-weight:600}
+  .hero .lead{max-width:520px;opacity:.92;margin-top:10px}
+  .route{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:16px;font-size:.85rem}
+  .route span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:3px 10px;border-radius:999px}
+  .route i{font-style:normal;opacity:.7}
+
+  /* BADGES */
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:-40px 0 0;position:relative;z-index:2}
+  .badge{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.88rem;font-weight:500;box-shadow:0 2px 10px rgba(31,42,51,.06)}
+  .badge.key{background:var(--red);color:#fff;border-color:var(--red);font-weight:700}
+
+  /* NAV */
+  nav.toc{display:flex;gap:8px;overflow-x:auto;padding:18px 0 4px;scrollbar-width:none}
+  nav.toc::-webkit-scrollbar{display:none}
+  nav.toc a{flex:0 0 auto;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--navy);background:var(--lake-soft);padding:7px 13px;border-radius:999px}
+
+  section{padding:40px 0 8px}
+  .sec-head{display:flex;align-items:baseline;gap:10px;margin-bottom:6px}
+  .sec-head .num{font-family:"DM Serif Display",serif;color:var(--lake);font-size:1.1rem}
+  .sub{color:var(--muted);margin-bottom:18px}
+
+  /* CARDS */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 14px;margin-bottom:14px}
+  .card h4{margin:0 0 6px;font-size:1.02rem;font-weight:700;color:var(--navy)}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  .grid{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:560px){.grid.two{grid-template-columns:1fr 1fr}}
+
+  .alert{border-radius:var(--radius);padding:16px 18px;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+  .alert .ico{font-size:1.3rem;line-height:1.2}
+  .alert.red{background:var(--red-soft);border-left:5px solid var(--red)}
+  .alert.teal{background:var(--lake-soft);border-left:5px solid var(--lake)}
+  .alert.amber{background:#FBF3E0;border-left:5px solid #C99A3B}
+  .alert strong{display:block;margin-bottom:2px}
+
+  .pend{display:inline-block;background:#FBF3E0;color:#8A6417;border:1px dashed #C99A3B;font-size:.75rem;font-weight:700;padding:1px 7px;border-radius:6px;letter-spacing:.02em;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:6px;background:var(--lake-soft);color:var(--navy)}
+  .tag.rec{background:var(--lake);color:#fff}
+  .time{font-weight:700;color:var(--red);font-variant-numeric:tabular-nums}
+  .place{font-weight:600}
+  .price{font-weight:700;color:var(--navy);background:var(--lake-soft);padding:0 6px;border-radius:5px;white-space:nowrap}
+  .code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-weight:700;background:#EEF1F3;padding:1px 6px;border-radius:5px;letter-spacing:.03em}
+  .small{font-size:.85rem;color:var(--muted)}
+  ul.clean{margin:6px 0 10px;padding-left:20px}
+  ul.clean li{margin-bottom:4px}
+
+  /* RESUMEN DÍAS */
+  .days{display:grid;gap:10px;grid-template-columns:1fr}
+  @media(min-width:560px){.days{grid-template-columns:1fr 1fr}}
+  .day{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;text-decoration:none;color:inherit}
+  .day .d{flex:0 0 54px;text-align:center;background:var(--navy);color:#fff;border-radius:12px;padding:6px 0}
+  .day .d b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:1.5rem;line-height:1}
+  .day .d small{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+  .day .t{font-weight:600;line-height:1.3}
+  .day .t small{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+
+  /* DÍA DETALLE */
+  .dayhead{display:flex;gap:14px;align-items:center;margin:34px 0 14px}
+  .dayhead .d{flex:0 0 62px;text-align:center;background:var(--red);color:#fff;border-radius:14px;padding:8px 0}
+  .dayhead .d b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:1.8rem;line-height:1}
+  .dayhead .d small{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}
+  .dayhead h3{margin:0}
+  .dayhead p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+
+  /* TIMELINE */
+  .timeline{list-style:none;margin:0 0 14px;padding:0 0 0 6px;position:relative}
+  .timeline::before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .timeline li{position:relative;padding:0 0 18px 34px}
+  .timeline li:last-child{padding-bottom:4px}
+  .timeline li::before{content:"";position:absolute;left:1px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--card);border:3px solid var(--lake)}
+  .timeline li.hl::before{border-color:var(--red);background:var(--red)}
+  .timeline .when{display:block;font-weight:700;color:var(--red);font-size:.92rem;font-variant-numeric:tabular-nums}
+  .timeline .what{font-weight:600}
+  .timeline .det{display:block;color:var(--muted);font-size:.9rem}
+
+  /* OPCIONES */
+  .opt{border-left:4px solid var(--lake)}
+  .opt.recommended{border-left-color:var(--red)}
+  .opt .tag{margin-bottom:8px}
+
+  /* INFO BLOCKS */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .info div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .info small{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+  .info b{font-weight:700;font-size:1rem;word-break:break-word}
+  .info .wide{grid-column:1 / -1}
+
+  /* TABLAS */
+  .tbl{width:100%;border-collapse:collapse;font-size:.9rem}
+  .tbl td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  .tbl tr:last-child td{border-bottom:0}
+  .tbl td:first-child{padding-right:12px}
+  .tbl td.r{text-align:right;white-space:nowrap;padding-left:10px}
+
+  /* MAPAS */
+  .map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#DDE5E3;margin-bottom:10px}
+  .map iframe{display:block;width:100%;height:340px;border:0}
+  .btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:10px 16px;border-radius:999px;margin:0 6px 8px 0}
+  .btn.alt{background:var(--lake)}
+
+  /* CHECKLIST */
+  .check{list-style:none;padding:0;margin:0}
+  .check li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line)}
+  .check li:last-child{border-bottom:0}
+  .box{flex:0 0 22px;height:22px;border:2px solid var(--lake);border-radius:6px;margin-top:1px}
+  .check li.must .box{border-color:var(--red);background:var(--red-soft)}
+
+  footer{margin:40px 0 0;padding:28px 0 40px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
+
+  @media(max-width:400px){
+    .hero h1{font-size:2.4rem}
+    h2{font-size:1.6rem}
+    .info{grid-template-columns:1fr}
+  }
+
+  /* IMPRESIÓN */
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff;font-size:11pt}
+    .wrap{max-width:none;padding:0}
+    .hero{background:none;color:var(--ink);padding:0 0 10px;border-bottom:2px solid var(--navy)}
+    .hero::before,.hero::after{display:none}
+    .route span{border-color:var(--line);background:none}
+    .badges{margin:12px 0 0}
+    .badge{box-shadow:none}
+    .badge.key{background:#fff;color:var(--red);border:2px solid var(--red)}
+    nav.toc,.map,.noprint{display:none!important}
+    section{padding:18px 0 0}
+    .card,.alert,.day,.info div,.timeline li,.check li,.dayhead{break-inside:avoid}
+    .dayhead{break-after:avoid}
+    h2,h3{break-after:avoid}
+    a{color:inherit;text-decoration:none}
+    .printlinks{display:block!important}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  .printlinks{display:none;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="cross" aria-hidden="true"></span> Guía del viaje</span>
+    <h1>Suiza 2026</h1>
+    <div class="date">Del viernes 6 al martes 10 de noviembre</div>
+    <p class="lead">Un fin de semana largo entre el valle del Valais, el lago Lemán y Ginebra. Aquí tenéis todo lo que necesitáis consultar desde el móvil.</p>
+    <div class="route" aria-label="Ruta">
+      <span>Pamplona</span><i>→</i><span>Bilbao</span><i>✈︎</i><span>Ginebra</span><i>→</i><span>Sion</span><i>→</i><span>Ginebra</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge key">🪪 DNI o pasaporte en vigor</span>
+    <span class="badge">📅 6–10 nov · 5 días</span>
+    <span class="badge">👥 4 viajeros</span>
+    <span class="badge">🧳 Solo equipaje de mano</span>
+    <span class="badge">💶 Se paga en francos (CHF)</span>
+  </div>
+
+  <nav class="toc" aria-label="Secciones">
+    <a href="#avisos">Avisos</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#dias">Día a día</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#ver">Qué ver</a>
+    <a href="#comer">Comer</a>
+    <a href="#misa">Misa</a>
+    <a href="#mapas">Mapas</a>
+    <a href="#vuelta">Vuelta</a>
+    <a href="#checklist">Checklist</a>
+  </nav>
+
+  <!-- ============ AVISOS ============ -->
+  <section id="avisos">
+    <div class="sec-head"><h2>Antes de nada</h2></div>
+    <p class="sub">Lo que no se puede olvidar.</p>
+
+    <div class="alert red"><span class="ico">🪪</span><div>
+      <strong>DNI o pasaporte en vigor, cada uno el suyo</strong>
+      Lo piden en el control de seguridad y al embarcar. También hace falta si se cruza a Francia (Yvoire).
+    </div></div>
+
+    <div class="alert amber"><span class="ico">🛒</span><div>
+      <strong>Supermercados: compra el sábado antes de las 17:00</strong>
+      Aldi y Lidl cierran el sábado a las 17:00 y el domingo no abre ningún súper. El domingo solo hay tiendas de estación o gasolinera.
+    </div></div>
+
+    <div class="alert teal"><span class="ico">🚞</span><div>
+      <strong>El tren del Gornergrat está cerrado del 2 al 14 de noviembre</strong>
+      En Zermatt, el Matterhorn Glacier Paradise sí abre.
+    </div></div>
+
+    <div class="alert teal"><span class="ico">🧳</span><div>
+      <strong>Equipaje: una maleta de cabina grande y una bolsa pequeña por persona</strong>
+      No se factura nada. Líquidos en envases de 100 ml como máximo, en bolsa transparente.
+    </div></div>
+  </section>
+
+  <!-- ============ RESUMEN ============ -->
+  <section id="resumen">
+    <div class="sec-head"><h2>El viaje de un vistazo</h2></div>
+    <p class="sub">Toca un día para ver el detalle.</p>
+    <div class="days">
+      <a class="day" href="#vie"><span class="d"><small>Vie</small><b>6</b></span><span class="t">Vuelo a Ginebra y llegada a Sion<small>✈️ 17:25 Bilbao → 18:55 Ginebra</small></span></a>
+      <a class="day" href="#sab"><span class="d"><small>Sáb</small><b>7</b></span><span class="t">Sion y el Valais<small>⛪ Misa 18:00 en la catedral</small></span></a>
+      <a class="day" href="#dom"><span class="d"><small>Dom</small><b>8</b></span><span class="t">Lago Lemán y Lausana<small>🏰 Chillon, Montreux, Lavaux…</small></span></a>
+      <a class="day" href="#lun"><span class="d"><small>Lun</small><b>9</b></span><span class="t">Tarde en Ginebra<small>🚗 Devolución del coche a las 13:00</small></span></a>
+      <a class="day" href="#mar"><span class="d"><small>Mar</small><b>10</b></span><span class="t">Vuelta a casa<small>✈️ Ginebra → Madrid → Bilbao</small></span></a>
+    </div>
+  </section>
+
+  <!-- ============ DÍA A DÍA ============ -->
+  <section id="dias">
+    <div class="sec-head"><h2>Día a día</h2></div>
+
+    <!-- VIERNES -->
+    <div class="dayhead" id="vie"><span class="d"><small>Vie</small><b>6</b></span>
+      <div><h3>Ida: Pamplona → Ginebra → Sion</h3><p>Día de viaje</p></div></div>
+    <ul class="timeline">
+      <li><span class="when">Primera hora de la tarde</span><span class="what">Salida de Pamplona en coche hacia el aeropuerto de Bilbao</span><span class="det">Unas 2 h. Salid con margen.</span></li>
+      <li class="hl"><span class="when">16:00</span><span class="what">Entrega del coche a Valet YAY! en la T1 de Bilbao</span><span class="det">Localizador <span class="code">VUKO0</span> · <span class="price">62 €</span> · Opel Zafira Tourer 5452JNN</span></li>
+      <li class="hl"><span class="when">16:55</span><span class="what">Cierre de la puerta de embarque</span></li>
+      <li class="hl"><span class="when">17:25 → 18:55</span><span class="what">Vuelo easyJet EZS1362 · Bilbao → Ginebra</span><span class="det">Reserva <span class="code">KDH2MQM</span> · Asientos 15A Mercedes, 15B Sofía, 15C Alejandro · Tarjeta de Javier: <span class="pend">[PENDIENTE]</span></span></li>
+      <li><span class="when">19:30</span><span class="what">Recogida del coche de alquiler en el aeropuerto de Ginebra</span><span class="det">Oferta Thrifty (Booking): Citroën C4 o similar, <span class="price">87,40 €</span> · Reserva <span class="pend">[PENDIENTE]</span></span></li>
+      <li><span class="when">≈ 2 h de carretera</span><span class="what">Llegada a Sion · The Place to Be in Sion</span><span class="det">Rue de Conthey 12 · Entrada de 16:00 a 00:00 · Sin parking</span></li>
+    </ul>
+
+    <!-- SÁBADO -->
+    <div class="dayhead" id="sab"><span class="d"><small>Sáb</small><b>7</b></span>
+      <div><h3>Sion y el valle del Valais</h3><p>Elegimos una opción según el tiempo</p></div></div>
+
+    <div class="card opt">
+      <span class="tag">Opción A · si está despejado</span>
+      <h4>🏔️ Zermatt y el Matterhorn</h4>
+      <p>En coche hasta <span class="place">Täsch</span> y tren lanzadera a Zermatt. Abre el <strong>Matterhorn Glacier Paradise</strong>; el Gornergrat está cerrado.</p>
+    </div>
+    <div class="card opt">
+      <span class="tag">Opción B · Valais clásico</span>
+      <h4>🏰 Sion y Val d'Hérens</h4>
+      <p><strong>Mañana:</strong> Sion — Valère, Tourbillon, casco antiguo, catedral Notre-Dame du Glarier y lago de Mont d'Orge.<br>
+      <strong>Tarde:</strong> Val d'Hérens — Pirámides de Euseigne y Evolène.</p>
+    </div>
+    <div class="card opt">
+      <span class="tag">Opción C · si llueve</span>
+      <h4>☔ Termas de Leukerbad o Fondation Pierre Gianadda (Martigny)</h4>
+    </div>
+
+    <div class="alert amber"><span class="ico">🛒</span><div><strong>Compras para el apartamento</strong>Aldi y Lidl cierran a las <span class="time">17:00</span>. Mañana domingo, todo cerrado.</div></div>
+    <div class="alert teal"><span class="ico">⛪</span><div><strong><span class="time">18:00</span> · Misa en la catedral de Sion</strong>Vale por la del domingo y deja el domingo libre. Es la opción recomendada.</div></div>
+
+    <!-- DOMINGO -->
+    <div class="dayhead" id="dom"><span class="d"><small>Dom</small><b>8</b></span>
+      <div><h3>Lago Lemán y Lausana</h3><p>Elegimos una opción</p></div></div>
+
+    <div class="card opt recommended">
+      <span class="tag rec">Recomendada · Riviera</span>
+      <h4>🏰 Chillon, Montreux y Vevey</h4>
+      <p>Castillo de <span class="place">Chillon</span> (<span class="time">10:00–17:00</span>), Montreux y Vevey. Por la tarde, Lavaux o Lausana.</p>
+    </div>
+    <div class="card opt">
+      <span class="tag">Opción A · Lavaux y Lausana</span>
+      <h4>🍇 Viñedos y ciudad</h4>
+      <p>Catedral, reloj de la Place de la Palud (carrillón a cada hora en punto, de 9 a 19), Ouchy y Parc de l'Hermitage.</p>
+    </div>
+    <div class="card opt">
+      <span class="tag">Opción C</span>
+      <h4>🧀 Gruyères o Glacier 3000</h4>
+    </div>
+
+    <div class="alert amber"><span class="ico">🛒</span><div><strong>Domingo: supermercados cerrados</strong>Solo abren las tiendas de las estaciones (Migros, Coop o Avec en la estación de Lausana) y las de gasolinera.</div></div>
+    <p class="small">⛪ Si no se fue a misa el sábado, ver las opciones del domingo en <a href="#misa">Misa</a>.</p>
+
+    <!-- LUNES -->
+    <div class="dayhead" id="lun"><span class="d"><small>Lun</small><b>9</b></span>
+      <div><h3>De Sion a Ginebra</h3><p>Tarde libre en la ciudad</p></div></div>
+    <ul class="timeline">
+      <li class="hl"><span class="when">10:00</span><span class="what">Salida del apartamento de Sion</span><span class="det">Unas 2 h por carretera hasta el aeropuerto de Ginebra.</span></li>
+      <li class="hl"><span class="when">13:00</span><span class="what">Devolución del coche de alquiler en el aeropuerto</span></li>
+      <li><span class="when">Tarde</span><span class="what">Ginebra: casco antiguo, catedral, Jardín Inglés y lago</span><span class="det">Tren del aeropuerto a Cornavin en 7 min, o bus 10 / 5. Ver <a href="#ver">Qué ver</a>.</span></li>
+      <li><span class="when">Noche</span><span class="what">Hotel en Ginebra</span><span class="det">Probablemente Nash Suites Airport Hotel · Reserva <span class="pend">[PENDIENTE]</span></span></li>
+    </ul>
+
+    <!-- MARTES -->
+    <div class="dayhead" id="mar"><span class="d"><small>Mar</small><b>10</b></span>
+      <div><h3>Vuelta a casa</h3><p>Mercedes, Sofía y Alejandro · Vuelta de Javier <span class="pend">[PENDIENTE]</span></p></div></div>
+    <ul class="timeline">
+      <li class="hl"><span class="when">8:15</span><span class="what">Lanzadera gratuita del hotel al aeropuerto</span></li>
+      <li><span class="when">8:45</span><span class="what">En la terminal, planta de Salidas</span></li>
+      <li><span class="when">Antes de las 9:30</span><span class="what">Control de seguridad pasado</span></li>
+      <li><span class="when">10:20</span><span class="what">En la puerta de embarque como muy tarde</span></li>
+      <li class="hl"><span class="when">10:50 → 12:45</span><span class="what">Vuelo Air Europa UX1664 · Ginebra → Madrid</span><span class="det">Reserva <span class="code">X3Y7WB</span></span></li>
+      <li><span class="when">14:30</span><span class="what">En la puerta del vuelo a Bilbao</span><span class="det">Escala en la T2 de Barajas, sin cambiar de terminal.</span></li>
+      <li class="hl"><span class="when">15:00 → 16:00</span><span class="what">Vuelo Air Europa UX7153 · Madrid → Bilbao</span></li>
+      <li class="hl"><span class="when">16:30</span><span class="what">Recogida del coche con Valet YAY! y vuelta a Pamplona</span><span class="det">Localizador <span class="code">VUKO0</span></span></li>
+    </ul>
+    <p class="small">👉 Instrucciones paso a paso en <a href="#vuelta">Vuelta desde Ginebra</a>.</p>
+  </section>
+
+  <!-- ============ RESERVAS ============ -->
+  <section id="reservas">
+    <div class="sec-head"><h2>Reservas y localizadores</h2></div>
+    <p class="sub">Todo a mano por si os lo piden.</p>
+
+    <h3>✈️ Vuelos</h3>
+    <div class="info">
+      <div><small>Ida · easyJet EZS1362</small><b>KDH2MQM</b></div>
+      <div><small>Vuelta · Air Europa</small><b>X3Y7WB</b></div>
+      <div class="wide"><small>eDreams (vuelta)</small><b>25840832156</b></div>
+      <div class="wide"><small>Vuelos de Javier (ida y vuelta)</small><b><span class="pend">[PENDIENTE]</span></b></div>
+    </div>
+
+    <h3>🚗 Coches</h3>
+    <div class="info">
+      <div><small>Aparcacoches Bilbao · Valet YAY!</small><b>VUKO0 · 62 €</b></div>
+      <div><small>Coche propio</small><b>Opel Zafira 5452JNN</b></div>
+      <div class="wide"><small>Alquiler en Ginebra · Thrifty (Booking)</small><b>Citroën C4 o similar · 87,40 € · <span class="pend">[PENDIENTE de reservar]</span></b></div>
+      <div class="wide"><small>Alquiler · recogida / devolución</small><b>Vie 6, 19:30 · Lun 9, 13:00 · Aeropuerto de Ginebra</b></div>
+    </div>
+
+    <h3>🏠 Alojamientos</h3>
+    <div class="card">
+      <h4>The Place to Be in Sion · 6 al 9 nov</h4>
+      <table class="tbl">
+        <tr><td>Dirección</td><td class="r"><span class="place">Rue de Conthey 12, 1950 Sion</span></td></tr>
+        <tr><td>Entrada</td><td class="r">16:00 – 00:00</td></tr>
+        <tr><td>Reserva</td><td class="r"><span class="code">6634.979.730</span></td></tr>
+        <tr><td>PIN</td><td class="r"><span class="code">8317</span></td></tr>
+        <tr><td>Teléfono</td><td class="r"><a href="tel:+41797540082">+41 79 754 00 82</a></td></tr>
+        <tr><td>Parking</td><td class="r">No tiene</td></tr>
+        <tr><td>Salida</td><td class="r">Lunes 9, 10:00</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Ginebra · noche del lunes 9</h4>
+      <p>Probablemente <span class="place">Nash Suites Airport Hotel</span>, Avenue Louis-Casaï 88, 1216 Meyrin (junto al aeropuerto). Reserva <span class="pend">[PENDIENTE]</span></p>
+    </div>
+    <p class="small">🔒 Esta página contiene localizadores y códigos de acceso: compartidla solo con los viajeros.</p>
+  </section>
+
+  <!-- ============ QUÉ VER ============ -->
+  <section id="ver">
+    <div class="sec-head"><h2>Qué ver</h2></div>
+    <p class="sub">Los imprescindibles de cada ciudad.</p>
+
+    <div class="grid two">
+      <div class="card">
+        <h4>🏰 Sion · sábado</h4>
+        <ul class="clean">
+          <li>Basílica de Valère</li>
+          <li>Castillo de Tourbillon (ruinas)</li>
+          <li>Casco antiguo</li>
+          <li>Catedral Notre-Dame du Glarier</li>
+          <li>Lago de Mont d'Orge</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>🌅 Lausana · domingo</h4>
+        <ul class="clean">
+          <li>Catedral de Notre-Dame</li>
+          <li>Reloj de la Place de la Palud</li>
+          <li>Escaleras del Mercado</li>
+          <li>Château d'Ouchy y barrio de Ouchy</li>
+          <li>Terrazas de Lavaux (UNESCO)</li>
+          <li>Parc de l'Hermitage</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>🌃 Ginebra · lunes por la tarde</h4>
+      <ul class="clean">
+        <li><strong>Catedral de San Pedro</strong> · se puede subir a las torres</li>
+        <li><strong>Jardín Inglés</strong> · reloj de flores</li>
+        <li>Parc La Grange y Parc Perle du Lac</li>
+        <li><strong>Palacio de las Naciones</strong> y la Silla Rota · bus 5</li>
+        <li><strong>Carouge</strong> · barrio histórico y artesanía</li>
+      </ul>
+      <p><strong>🛍️ Tiendas:</strong> Rue du Rhône; casco antiguo (Rue Verdaine, Grand-Rue, Place du Bourg-de-Four); Carouge.</p>
+      <p class="small">Recorrido para media tarde: casco antiguo y San Pedro → Jardín Inglés y lago → Carouge si da tiempo.</p>
+    </div>
+
+    <div class="card">
+      <h4>🚆 Cómo ir al centro de Ginebra</h4>
+      <ul class="clean">
+        <li><strong>Tren:</strong> estación Genève-Aéroport → <span class="place">Genève-Cornavin</span> en <span class="time">7 min</span>, cada pocos minutos.</li>
+        <li><strong>Bus 10:</strong> Cornavin → Bel-Air → Rive (casco antiguo, lago, Jet d'Eau). Unos 30 min.</li>
+        <li><strong>Bus 5:</strong> Nations → Cornavin → Bel-Air.</li>
+        <li><strong>Lanzadera gratuita</strong> del hotel Nash al aeropuerto, cada ~20 min desde las 6:00 (confirmar en recepción).</li>
+      </ul>
+      <div class="alert teal" style="margin:10px 0 0"><span class="ico">🎫</span><div><strong>Geneva Transport Card: transporte gratis</strong>La dan los hoteles de Ginebra (app Hello Geneva). Formulario por email hasta 3 días antes; si se reserva por Booking, mirad también el spam. Cada tarjeta es personal.</div></div>
+    </div>
+
+    <h3>Excursiones extra</h3>
+    <div class="grid two">
+      <div class="card"><h4>🌸 Yvoire (Francia)</h4><p>Pueblo medieval junto al lago Lemán, a 35–40 min en coche de Ginebra. <strong>Llevad documentación.</strong></p></div>
+      <div class="card"><h4>🏔️ Monte Cervino</h4><p>Ver opción A del sábado. Gornergrat cerrado del 2 al 14/11.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ COMER ============ -->
+  <section id="comer">
+    <div class="sec-head"><h2>Comer y comprar</h2></div>
+    <p class="sub">Opciones económicas. Confirmad horarios antes de ir.</p>
+
+    <h3>🛒 Supermercados</h3>
+    <div class="card">
+      <table class="tbl">
+        <tr><td><strong>ALDI Sion</strong><br><span class="small">Rue des Casernes 55a · 5 min en coche</span></td><td class="r">Sáb <span class="time">7:30–17:00</span><br><span class="small">Dom cerrado</span></td></tr>
+        <tr><td><strong>Lidl Conthey</strong><br><span class="small">Route des Rottes 38 · 10 min en coche</span></td><td class="r">Sáb <span class="time">7:30–17:00</span><br><span class="small">Dom cerrado</span></td></tr>
+        <tr><td><strong>ALDI Lausanne</strong><br><span class="small">Rue St-Martin 3-5</span></td><td class="r">Sáb <span class="time">8:00–18:00</span><br><span class="small">Dom cerrado</span></td></tr>
+      </table>
+    </div>
+
+    <h3>🍽️ Sion</h3>
+    <div class="card">
+      <table class="tbl">
+        <tr><td><strong>Thaï Sawasdee</strong> · tailandés<br><span class="small">Av. de la Gare 33 · muy cerca del apartamento</span></td></tr>
+        <tr><td><strong>Rong Town</strong> · fondue china libre<br><span class="small">Av. de France 6</span></td></tr>
+        <tr><td><strong>Inglewood</strong> · hamburguesas<br><span class="small">Cours de la Gare 27</span></td></tr>
+        <tr><td><strong>Pizzeria de Valère</strong> · pizza y ensaladas<br><span class="small">Rue des Echutes 40</span></td></tr>
+        <tr><td><strong>Vieux-Valais</strong> · raclette y fondue (no es barato)<br><span class="small">Rue Saint-Théodule 3</span></td></tr>
+      </table>
+      <p class="small" style="margin-top:8px">☕ Cafés: Zenhäusern (Place du Midi 33) · Le Délice du Grand-Pont · Café des Châteaux · Udrisard (abre domingos).</p>
+    </div>
+
+    <h3>🍽️ Lausana</h3>
+    <div class="card">
+      <table class="tbl">
+        <tr><td><strong>Holy Cow!</strong> · hamburguesas, abre todos los días<br><span class="small">Rue des Terreaux 10</span></td></tr>
+        <tr><td><strong>La Buvette Vaudoise</strong> · cocina local<br><span class="small">Parlamento vaudois, junto a la catedral</span></td></tr>
+        <tr><td><strong>Le Barbare</strong> · chocolate caliente, brunch domingos<br><span class="small">Escaliers du Marché 27</span></td></tr>
+        <tr><td><strong>Barrio del Flon</strong> · comida informal</td></tr>
+      </table>
+    </div>
+
+    <h3>🍽️ Ginebra</h3>
+    <div class="card">
+      <table class="tbl">
+        <tr><td><strong>Manora (Manor)</strong><br><span class="small">Rue de Cornavin 6, última planta</span></td><td class="r"><span class="price">12–16 CHF</span></td></tr>
+        <tr><td><strong>Migros / Coop Restaurant</strong><br><span class="small">Estación de Cornavin · Migros Plainpalais</span></td><td class="r"><span class="price">12–18 CHF</span></td></tr>
+        <tr><td><strong>Le Palazoo</strong> · vegetariano<br><span class="small">L'Usine, Place des Volontaires</span></td><td class="r"><span class="price">15–18 CHF</span></td></tr>
+        <tr><td><strong>Parfums de Beyrouth · Chez Ma Cousine</strong><br><span class="small">Pâquis · pollo asado</span></td><td class="r"><span class="price">16–18 CHF</span></td></tr>
+        <tr><td><strong>Café de la Limite</strong><br><span class="small">Saint-Jean · ración enorme</span></td><td class="r"><span class="price">22 CHF</span></td></tr>
+      </table>
+    </div>
+
+    <h3>💡 Trucos para ahorrar</h3>
+    <div class="grid two">
+      <div class="card"><h4>🕛 Come fuerte a mediodía</h4><p>«Plat du jour» de 12:00 a 14:00. Por la noche, 7–10 CHF más.</p></div>
+      <div class="card"><h4>💧 Agua del grifo</h4><p>Pedid <em>«eau du robinet»</em>: gratis y buena. Ahorro de unos 6 CHF.</p></div>
+      <div class="card"><h4>🥪 Para llevar</h4><p>Coop Pronto o Migros Take Away: bocadillo, ensalada y fruta por <span class="price">10–11 CHF</span>.</p></div>
+      <div class="card"><h4>📱 Too Good To Go</h4><p>Comida sobrante de panaderías y restaurantes a precio reducido.</p></div>
+    </div>
+    <div class="card">
+      <h4>💶 Precios orientativos</h4>
+      <table class="tbl">
+        <tr><td>Café</td><td class="r"><span class="price">4–6 CHF</span></td></tr>
+        <tr><td>Bocadillo + café en panadería</td><td class="r"><span class="price">10–15 CHF</span></td></tr>
+        <tr><td>Kebab o falafel</td><td class="r"><span class="price">10–15 CHF</span></td></tr>
+        <tr><td>Pizza</td><td class="r"><span class="price">15–25 CHF</span></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ MISA ============ -->
+  <section id="misa">
+    <div class="sec-head"><h2>Misa del fin de semana</h2></div>
+    <p class="sub">Horarios a confirmar la semana del viaje en horairemesses.ch o theodia.org.</p>
+
+    <div class="card opt recommended">
+      <span class="tag rec">Recomendada</span>
+      <h4>Sábado 7 · <span class="time">18:00</span> · Catedral de Sion</h4>
+      <p>Rue de la Cathédrale 13, a 5–10 min a pie del apartamento. Vale por la del domingo.</p>
+    </div>
+    <div class="card opt">
+      <span class="tag">En español</span>
+      <h4>Domingo 8 · <span class="time">19:00</span> · Sacré-Cœur de Ouchy (Lausana)</h4>
+      <p>Chemin de Beau-Rivage 1. Misión Católica de Lengua Española. Después, ~1 h de vuelta a Sion.</p>
+    </div>
+    <div class="card opt">
+      <h4>Domingo 8 · <span class="time">10:30</span> · Catedral de Sion</h4>
+      <p>Se pierde media mañana: salida hacia Chillon sobre las 11:45. También Sacré-Cœur de Sion a las 9:30.</p>
+    </div>
+    <div class="card opt">
+      <h4>Domingo 8 · <span class="time">17:30</span> · Notre-Dame du Valentin (Lausana)</h4>
+      <p>Rue du Valentin 3, en el centro.</p>
+    </div>
+  </section>
+
+  <!-- ============ MAPAS ============ -->
+  <section id="mapas">
+    <div class="sec-head"><h2>Mapas</h2></div>
+    <p class="sub">Sitios marcados en Google Maps: destinos, comidas, supermercados, alojamientos e iglesias. Abridlos en la app para navegar.</p>
+
+    <div class="map noprint"><iframe src="https://www.google.com/maps/d/embed?mid=14g5kBWRD0XFxG3RwPCuVuDS6pCxou3o" title="Mapa 1 del viaje" loading="lazy" allowfullscreen></iframe></div>
+    <a class="btn" href="https://www.google.com/maps/d/viewer?mid=14g5kBWRD0XFxG3RwPCuVuDS6pCxou3o">🗺️ Abrir mapa 1</a>
+
+    <div class="map noprint" style="margin-top:14px"><iframe src="https://www.google.com/maps/d/embed?mid=1ZvzAKlxTL63dpxliiMy9uTAHfTKCdZ0" title="Mapa 2 del viaje" loading="lazy" allowfullscreen></iframe></div>
+    <a class="btn alt" href="https://www.google.com/maps/d/viewer?mid=1ZvzAKlxTL63dpxliiMy9uTAHfTKCdZ0">🗺️ Abrir mapa 2</a>
+
+    <p class="printlinks">Mapa 1: google.com/maps/d/viewer?mid=14g5kBWRD0XFxG3RwPCuVuDS6pCxou3o<br>Mapa 2: google.com/maps/d/viewer?mid=1ZvzAKlxTL63dpxliiMy9uTAHfTKCdZ0</p>
+    <p class="small">🌦️ Previsión del tiempo: <a href="https://www.meteoblue.com">meteoblue.com</a></p>
+  </section>
+
+  <!-- ============ VUELTA ============ -->
+  <section id="vuelta">
+    <div class="sec-head"><h2>Vuelta desde Ginebra</h2></div>
+    <p class="sub">Martes 10 · Mercedes, Sofía y Alejandro · Sin facturar.</p>
+
+    <div class="card">
+      <h4>1 · La noche anterior</h4>
+      <ul class="clean">
+        <li>Pagar el hotel.</li>
+        <li>Preguntar en recepción a qué hora y desde dónde sale la lanzadera.</li>
+        <li>Tener las tarjetas de embarque de <strong>los dos vuelos</strong> (app de Air Europa o en papel).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>2 · En el aeropuerto de Ginebra (Terminal 1)</h4>
+      <ul class="clean">
+        <li>La lanzadera deja en <strong>Llegadas</strong>. Subid una planta a <strong>«Départs / Departures»</strong>.</li>
+        <li>No hay que ir a ningún mostrador: directos a <strong>«Contrôle de sûreté / Security control»</strong>.</li>
+        <li>Cada uno escanea su tarjeta en las puertas automáticas.</li>
+      </ul>
+      <div class="alert red" style="margin:8px 0 0"><span class="ico">⚠️</span><div><strong>No vayáis por «Secteur France / French sector»</strong>Vuestro camino es la parte suiza.</div></div>
+    </div>
+    <div class="card">
+      <h4>3 · Control de seguridad</h4>
+      <ul class="clean">
+        <li>Bolsa de líquidos fuera de la maleta.</li>
+        <li>Abrigos, cinturones, móviles, llaves y monedas a la bandeja.</li>
+        <li>Al terminar, comprobad: <strong>DNI, móvil y tarjetas</strong>.</li>
+        <li>Contad con 15–30 min de cola.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>4 · Puerta de embarque</h4>
+      <ul class="clean">
+        <li>Pantallas «Départs»: buscad <strong>10:50 · Madrid · UX1664</strong>. La puerta («Porte») sale 30–40 min antes.</li>
+        <li>Casi seguro será puerta <strong>A</strong> o <strong>D</strong>.</li>
+        <li>En la puerta como muy tarde a las <span class="time">10:20</span>.</li>
+      </ul>
+      <div class="alert red" style="margin:8px 0 0"><span class="ico">🛂</span><div><strong>Si llegáis a un control de pasaportes, os habéis equivocado</strong>Es para vuelos fuera de Schengen. Volved atrás.</div></div>
+    </div>
+    <div class="card">
+      <h4>5 · Escala en Madrid (2 h 15 min)</h4>
+      <ul class="clean">
+        <li>Seguid <strong>«Conexiones / Connections»</strong>, nunca «Salida / Exit».</li>
+        <li>Misma Terminal 2. Buscad <strong>15:00 · Bilbao · UX7153</strong>.</li>
+        <li>En la puerta a las <span class="time">14:30</span>.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>6 · Bilbao</h4>
+      <p>Salida directa (sin maletas). Valet YAY! entrega el coche en la terminal · <span class="code">VUKO0</span>. Si hay retraso, avisadle.</p>
+    </div>
+
+    <h3>🆘 Si algo sale mal</h3>
+    <div class="card">
+      <table class="tbl">
+        <tr><td><strong>No encontráis la puerta</strong></td><td>Mostrador «Information» o cualquier empleado.</td></tr>
+        <tr><td><strong>Peligra la conexión</strong></td><td>En Madrid, mostrador de Air Europa «Conexiones / Transfer». Misma reserva: os recolocan.</td></tr>
+        <tr><td><strong>Cancelación</strong></td><td>App o email de Air Europa · <span class="code">X3Y7WB</span></td></tr>
+        <tr><td><strong>Emergencia</strong></td><td><a href="tel:112"><strong>112</strong></a> · Suiza y España</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ CHECKLIST ============ -->
+  <section id="checklist">
+    <div class="sec-head"><h2>Checklist</h2></div>
+    <p class="sub">Para llevar y para no olvidar.</p>
+
+    <h3>🎒 En la mochila</h3>
+    <div class="card">
+      <ul class="check">
+        <li class="must"><span class="box"></span><span><strong>DNI o pasaporte en vigor</strong> · cada uno el suyo</span></li>
+        <li class="must"><span class="box"></span><span><strong>Tarjetas de embarque</strong> de todos los vuelos (móvil o papel)</span></li>
+        <li><span class="box"></span><span>Móvil cargado (y cargador)</span></li>
+        <li><span class="box"></span><span>Líquidos ≤ 100 ml en bolsa transparente con cierre</span></li>
+        <li><span class="box"></span><span>Botella de agua vacía para rellenar tras el control</span></li>
+        <li><span class="box"></span><span>Una maleta de cabina grande + una bolsa pequeña por persona</span></li>
+        <li><span class="box"></span><span>App <strong>Hello Geneva</strong> con la Geneva Transport Card (lunes)</span></li>
+      </ul>
+    </div>
+
+    <h3>📝 Pendiente de organizar</h3>
+    <div class="card">
+      <ul class="check">
+        <li class="must"><span class="box"></span><span>Reservar el coche de alquiler y revisar franquicia (<span class="price">2.974 €</span>), viñeta, combustible y conductor adicional</span></li>
+        <li class="must"><span class="box"></span><span>Reservar el hotel de Ginebra para el lunes 9</span></li>
+        <li><span class="box"></span><span>Tarjeta de embarque de ida y vuelo de vuelta de Javier</span></li>
+        <li><span class="box"></span><span>Check-in online de Air Europa (y añadir maletas si hiciera falta)</span></li>
+        <li><span class="box"></span><span>Elegir opción del sábado y del domingo</span></li>
+        <li><span class="box"></span><span>Decidir misa y confirmar horarios esa semana</span></li>
+        <li><span class="box"></span><span>Compra del fin de semana: sábado antes de las 17:00</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span class="cross" aria-hidden="true"></span><br><br>
+    Suiza 2026 · 6–10 de noviembre<br>
+    Javier · Mercedes · Sofía · Alejandro<br>
+    <span class="small">Actualizado el 2 de noviembre de 2026 · ¡Buen viaje! 🏔️</span>
+  </footer>
+</main>
+</body>
+</html>
